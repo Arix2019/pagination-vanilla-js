@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+:root {
+    --black: #130f0d;
+    --primary: hsl(32, 98%, 56%);
+    --white: #f0f0f9;
+    --marrom: hsl(32, 98%, 12%);
+    --dark-marrom: hsl(32, 98%, 5%);
+    --transparent: rgba(255,255,255,0.04);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: var(--white);
+    background-color: var(--black);
+    font-family: 'Zen Dots', cursive;
+}
+
+.active {
+    color: orange;
+}
+
+#paginate {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 950px;
+    min-height: calc(100vh - 74px);
+}
+
+#paginate .item{
+    border-bottom: 1px solid var(--marrom) ;
+    padding: 16px 32px;
+}
+
+#paginate .item:hover{
+    cursor: pointer;
+    background-color: var(--transparent);
+}
+
+header {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: var(--dark-marrom);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 8px;
+
+}
+
+#paginate .pagination div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+#paginate .pagination div:not(.numbers),
+#paginate .pagination div.numbers div {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--marrom);
+    background-color: var(--transparent);
+}
+
+#paginate .pagination div:not(.numbers):hover,
+#paginate .pagination div.numbers div:hover,
+#paginate .pagination div.numbers div:active {
+    color: var(--primary);
+}
